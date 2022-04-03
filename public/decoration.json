@@ -1,0 +1,20 @@
+{
+  "global":
+    {
+      "primary_color": "",
+      "secondary_color": "amber",
+      "text_color": "gray",
+      "text_size": "",
+      "headline_size": "",
+      "button_size": "",
+      "button_type": ""
+    },
+  "header":
+    {
+      "type": "sticky"
+    },
+  "hero":
+    {
+      "color_mode": "light"
+    }
+}

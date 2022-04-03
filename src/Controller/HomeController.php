@@ -7,20 +7,29 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Twig\Environment;
 use App\Service\Content;
-use App\Service\Atom;
+use App\Service\Decoration;
+use App\Service\Item;
 
 class HomeController extends AbstractController
 {
     /**
      * @Route("/", name="app_home")
+     *
+     * index
+     *
+     * @param  mixed $content
+     * @param  mixed $component
+     * @param  mixed $twigEnvironment
+     * @return Response
      */
-    public function index(Content $content, Atom $component, Environment $twigEnvironment): Response
+    public function index(Content $content, Decoration $decoration, Item $component, Environment $twigEnvironment): Response
     {
         $data = $content->load();
+        $design = $decoration->load();
         // $output = print_r($data, true);
         $output = '';
-        foreach ($data['sections'][0]['items'][0]['atoms'] as $atom) {
-            $output .= $component->render($atom, $twigEnvironment);
+        foreach ($data['sections'][0]['items'] as $item) {
+            $output .= $component->render($item, $design, $twigEnvironment);
         }
 
         return $this->render('home/index.html.twig', [

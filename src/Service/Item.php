@@ -8,9 +8,18 @@ class Item {
     /**
      * Render item
      */
-    public function render(array $item, Environment $twigEnvironment) {
+    public function render(array $item, array $design, Environment $twigEnvironment) {
+        // fix empty type
+        if (!isset($item['type'])) {
+            $item['type'] = 'hero';
+        }
+        $content = [];
+        $background = 'bg-' . $design['global']['secondary_color'] . '-200';
+        $content['decoration']['background'] = $background;
 
-        $html = '';
+        $html = $twigEnvironment->render('components/items/' . $item['type'] . '.html.twig', [
+            'content' => $content,
+        ]);
         return $html;
     }
 }
