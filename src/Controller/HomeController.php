@@ -28,10 +28,11 @@ class HomeController extends AbstractController
         $design = $decoration->load();
         // $output = print_r($data, true);
         $output = '';
-        foreach ($data['sections'][0]['items'] as $item) {
-            $output .= $component->render($item, $design, $twigEnvironment);
+        foreach ($data['sections'] as $section) {
+            foreach ($section['items'] as $item) {
+                $output .= $component->render($item, $design, $twigEnvironment, $section);
+            }
         }
-
         return $this->render('home/index.html.twig', [
             'controller_name' => 'Design Management System',
             'markup' => $output,

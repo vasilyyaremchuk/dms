@@ -1,21 +1,18 @@
 <!-- Hero left/right -->
       <div class="{{ content.decoration.background }}">
-          <div class="container flex px-6 py-4 mx-auto lg:h-128 lg:py-16 ' . $case . '">
-              <div class="flex flex-col items-center w-full ' . $case . ' lg:w-1/2">
+          <div class="container flex px-6 py-4 mx-auto lg:h-128 lg:py-16 {{ content.variant }}">
+              <div class="flex flex-col items-center w-full {{ content.variant }} lg:w-1/2">
                   <div class="max-w-lg">
-                      <h1 class="' . $title_size_mobile . ' tracking-wide text-' . $primary . '-' . $primary_palete . ' lg:' . $title_size_desktop . '">Set your title</h1>
-                      <p class="mt-4 ' . $txt_size . ' text-' . $primary . '-' . $primary_palete . '">Lorem ipsum, dolor sit amet consectetur
-                          adipisicing elit. Aut quia asperiores alias vero magnam recusandae adipisci ad vitae
-                          laudantium quod rem voluptatem eos accusantium cumque.</p>
+                      {{ content.headline|raw }}
+                      {{ content.text|raw }}
                       <div class="mt-6">
-                          <a href="#" class="block px-3 py-2 font-semibold text-center ' . $txt_size . ' text-' . $secondary . '-' . $secondary_palete . ' transition-colors duration-200 transform bg-' . $primary . '-' . $primary_palete . ' rounded-md lg:inline hover:bg-' . $primary . '-' . $primary_palete_hover . '">Download
-                          </a>
+                          {{ content.button|raw }}
                       </div>
                   </div>
               </div>
 
               <div class="flex items-center justify-center w-full h-96 lg:w-1/2">
-                  <img class="object-cover w-full h-full max-w-2xl rounded-md" src="https://source.unsplash.com/random/1600x900?' . $photo_topic . '" alt="Placeholder photo">
+                  {{ content.image|raw }}
               </div>
           </div>
       </div>

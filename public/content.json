@@ -26,7 +26,31 @@
               "content": {
                 "url": "https://abzats.com/",
                 "title": "Read more"
-              }
+              },
+              "type": "button"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "atoms": [
+            {
+              "content": "CTA title",
+              "type": "headline"
+            },
+            {
+              "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+              "type": "text"
+            },
+            {
+              "content": {
+                "url": "https://abzats.com/",
+                "title": "Read more"
+              },
+              "type": "button"
             }
           ]
         }

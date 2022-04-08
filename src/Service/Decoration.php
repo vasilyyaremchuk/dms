@@ -31,6 +31,14 @@ class Decoration {
         if (!isset($decoration['global']['button_size']) || !$decoration['global']['button_size']) {
             $decoration['global']['button_size'] = $sizes[array_rand($sizes)];
         }
+        $dark_palete = [100, 200, 300];
+        $light_palete = [600, 700, 800];
+        if (!isset($decoration['global']['light_palete']) || !$decoration['global']['light_palete']) {
+            $decoration['global']['light_palete'] = $light_palete[array_rand($light_palete)];
+        }
+        if (!isset($decoration['global']['dark_palete']) || !$decoration['global']['dark_palete']) {
+            $decoration['global']['dark_palete'] = $dark_palete[array_rand($dark_palete)];
+        }
         return $decoration;
     }
 

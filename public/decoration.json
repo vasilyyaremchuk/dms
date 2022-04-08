@@ -16,5 +16,9 @@
   "hero":
     {
       "color_mode": "light"
+    },
+    "cta":
+    {
+      "color_mode": "dark"
     }
 }
