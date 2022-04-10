@@ -1,0 +1,14 @@
+{
+  "name": "horizontal-menu",
+  "elements":
+    {
+      "link": 5
+    },
+  "max_in_row": 2,
+  "min_in_row": 1,
+  "whitelist": [
+    "containered"
+  ],
+  "blacklist": [
+  ]
+}

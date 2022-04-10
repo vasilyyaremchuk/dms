@@ -1,0 +1,18 @@
+{
+  "name": "cta",
+  "elements":
+    {
+      "image": 1,
+      "headline": 1,
+      "text": 1,
+      "button": 1
+    },
+  "max_in_row": 4,
+  "min_in_row": 2,
+  "whitelist": [
+    "containered",
+    "full-width"
+  ],
+  "blacklist": [
+  ]
+}

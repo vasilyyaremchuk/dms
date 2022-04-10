@@ -1,0 +1,22 @@
+{
+    "name": "hero",
+    "elements":
+      {
+        "headline": 1,
+        "text": 1,
+        "button": 1,
+        "image": 1
+      },
+    "variant":
+      [
+        "flex-row",
+        "flex-row-reverse"
+      ],
+    "max_in_row": 3,
+    "min_in_row": 1,
+    "whitelist": [
+      "full-width"
+    ],
+    "blacklist": [
+    ]
+  }

@@ -7,6 +7,50 @@
     },
   "sections": [
     {
+      "type": "containered",
+      "items": [
+        {
+          "atoms": [
+            {
+              "content": {
+                "url": "https://abzats.com/",
+                "title": "Home"
+              },
+              "type": "link"
+            },
+            {
+              "content": {
+                "url": "https://abzats.com/",
+                "title": "About Us"
+              },
+              "type": "link"
+            },
+            {
+              "content": {
+                "url": "https://abzats.com/",
+                "title": "Services"
+              },
+              "type": "link"
+            },
+            {
+              "content": {
+                "url": "https://abzats.com/",
+                "title": "Portfolio"
+              },
+              "type": "link"
+            },
+            {
+              "content": {
+                "url": "https://abzats.com/",
+                "title": "Contact Us"
+              },
+              "type": "link"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "items": [
         {
           "atoms": [
@@ -44,6 +88,79 @@
             {
               "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
               "type": "text"
+            },
+            {
+              "content": {
+                "url": "https://abzats.com/",
+                "title": "Read more"
+              },
+              "type": "button"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "atoms": [
+            {
+              "content": "Card 1",
+              "type": "headline"
+            },
+            {
+              "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+              "type": "text"
+            },
+            {
+              "content": "https://images.unsplash.com/photo-1648737154547-b0dfd281c51e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60",
+              "type": "image"
+            },
+            {
+              "content": {
+                "url": "https://abzats.com/",
+                "title": "Read more"
+              },
+              "type": "button"
+            }
+          ]
+        },
+        {
+          "atoms": [
+            {
+              "content": "Card 2",
+              "type": "headline"
+            },
+            {
+              "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+              "type": "text"
+            },
+            {
+              "content": "https://images.unsplash.com/photo-1648737154547-b0dfd281c51e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60",
+              "type": "image"
+            },
+            {
+              "content": {
+                "url": "https://abzats.com/",
+                "title": "Read more"
+              },
+              "type": "button"
+            }
+          ]
+        },
+        {
+          "atoms": [
+            {
+              "content": "Card 3",
+              "type": "headline"
+            },
+            {
+              "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+              "type": "text"
+            },
+            {
+              "content": "https://images.unsplash.com/photo-1648737154547-b0dfd281c51e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60",
+              "type": "image"
             },
             {
               "content": {

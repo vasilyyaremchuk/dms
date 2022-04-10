@@ -1,0 +1,8 @@
+<!-- Horizontal menu -->
+<ul class="flex">
+{% for item in content.link %}
+  <li class="mr-6">
+    {{ item|raw }}
+  </li>
+{% endfor %}
+</ul>

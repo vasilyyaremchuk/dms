@@ -1,0 +1,8 @@
+<!-- containered section -->
+<section class="{{ content.decoration.background }}">
+    <div class="max-w-5xl m-auto">
+        {% for item in content.items %}
+            {{ item|raw }}
+        {% endfor %}
+    </div>
+</section>
