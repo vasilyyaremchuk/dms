@@ -1,8 +1,10 @@
 <!-- containered section -->
 <section class="{{ content.decoration.background }}">
-    <div class="max-w-5xl m-auto">
+    <div class="max-w-5xl m-auto flex">
         {% for item in content.items %}
-            {{ item|raw }}
+            <div class="flex-auto">
+                {{ item|raw }}
+            </div>
         {% endfor %}
     </div>
 </section>

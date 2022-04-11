@@ -2,8 +2,8 @@
   "global":
     {
       "primary_color": "",
-      "secondary_color": "amber",
-      "text_color": "gray",
+      "secondary_color": "",
+      "text_color": "",
       "text_size": "",
       "headline_size": "",
       "button_size": "",

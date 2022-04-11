@@ -11,7 +11,7 @@ class Item extends Atom {
      */
     public function render(array $item, array $decoration, Environment $twigEnvironment, array $context) {
         // get available item components, TBD: load it ones
-
+        $number_siblings = count($context["items"]);
         $available_components = [];
         $path    = '../templates/components/items/';
         $files = array_diff(scandir($path), array('.', '..'));
@@ -21,13 +21,18 @@ class Item extends Atom {
                 $available_components[$parts[0]] = json_decode(file_get_contents($path . $file), true);
             }
         }
+        // TBD: better validation of number of elements in column
         foreach ($available_components as $key => $available_component) {
             $available_components[$key]['available_elements'] = array_keys($available_component['elements']);
-            $available_components[$key]['score'] = 0;
+            if ($available_components[$key]["max_in_row"] >= $number_siblings && $available_components[$key]["min_in_row"] <= $number_siblings) {
+                $available_components[$key]['score'] = 1;
+            }
+            else {
+                $available_components[$key]['score'] = -100; // TBD: better way to deny
+            }
         }
         $content = [];
         // select item type
-        $available_components['score'] = 0;
         foreach ($item['atoms'] as $key => $atom) {
             $item['atoms'][$key] = parent::atom_type_validate($atom);
             foreach ($available_components as $av_key => $available_component) {
@@ -71,10 +76,15 @@ class Item extends Atom {
         }
         // TBD: validate if item type is set
         $item['type'] = $item_type;
-
-        $html = $twigEnvironment->render('components/items/' . $item['type'] . '.html.twig', [
-            'content' => $content,
-        ]);
+        // TBD: find the reason why type is empty
+        if ($item['type']) {
+            $html = $twigEnvironment->render('components/items/' . $item['type'] . '.html.twig', [
+                'content' => $content,
+            ]);
+        }
+        else {
+            $html = '';
+        }
         return $html;
     }
 }
