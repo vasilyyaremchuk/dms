@@ -1,1 +1,3 @@
-<img class="{{ classes }}" src="{{ content }}" alt="{{ alt }}">
+{% if content %}
+    <img class="{{ classes }}" src="{{ content }}" alt="{{ alt }}">
+{% endif %}

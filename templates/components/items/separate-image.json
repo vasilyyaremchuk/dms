@@ -1,0 +1,14 @@
+{
+  "name": "separate-image",
+  "elements":
+    {
+      "image": 1
+    },
+  "max_in_row": 6,
+  "min_in_row": 1,
+  "whitelist": [
+    "containered"
+  ],
+  "blacklist": [
+  ]
+}

@@ -23,7 +23,14 @@ class Item extends Atom {
         }
         // TBD: better validation of number of elements in column
         foreach ($available_components as $key => $available_component) {
-            $available_components[$key]['available_elements'] = array_keys($available_component['elements']);
+            $available_components[$key]['available_elements'] = [];
+            if (is_array($available_component['elements']) && !empty($available_component['elements'])) {
+                foreach ($available_component['elements'] as $el_key => $element) {
+                    for ($i = 0; $i< $element; $i++) {
+                        $available_components[$key]['available_elements'][] = $el_key;
+                    }
+                }
+            }
             if ($available_components[$key]["max_in_row"] >= $number_siblings && $available_components[$key]["min_in_row"] <= $number_siblings) {
                 $available_components[$key]['score'] = 1;
             }
@@ -33,18 +40,11 @@ class Item extends Atom {
         }
         $content = [];
         // select item type
+        $existing_components = [];
         foreach ($item['atoms'] as $key => $atom) {
             $item['atoms'][$key] = parent::atom_type_validate($atom);
-            foreach ($available_components as $av_key => $available_component) {
-                if (isset($available_component['available_elements']) && is_array($available_component['available_elements'])) {
-                    if(in_array($item['atoms'][$key]['type'], $available_component['available_elements'])) {
-                        $available_components[$av_key]['score'] += 1;
-                    }
-                    else {
-                        $available_components[$av_key]['score'] -= 1;
-                    }
-                }
-            }
+            $existing_components[] = $item['atoms'][$key]['type'];
+            // render atoms
             if (isset($content[$item['atoms'][$key]['type']])) {
                 if (is_array($content[$item['atoms'][$key]['type']])) {
                     $content[$item['atoms'][$key]['type']][] = parent::render($item['atoms'][$key], $decoration, $twigEnvironment, $context);
@@ -62,6 +62,15 @@ class Item extends Atom {
                 $content[$item['atoms'][$key]['type']] = parent::render($item['atoms'][$key], $decoration, $twigEnvironment, $context);
             }
         }
+        // scoring to check the type
+        foreach ($available_components as $av_key => $available_component) {
+            if (isset($available_component['available_elements']) && is_array($available_component['available_elements'])) {
+                // + itersection of elements
+                $available_components[$av_key]['score'] += count(array_intersect($existing_components, $available_component['available_elements']));
+                // - score if we have different number of elements
+                $available_components[$av_key]['score'] -= abs(count($existing_components) - count($available_component['available_elements']));
+            }
+        }
         $item_type = '';
         $item_type_score = 0;
         foreach ($available_components as $key => $available_component) {
@@ -76,6 +85,46 @@ class Item extends Atom {
         }
         // TBD: validate if item type is set
         $item['type'] = $item_type;
+
+        // Inversed mode of the element
+        if (isset($available_components[$item_type]['mode']) && $available_components[$item_type]['mode'] == 'inversed') {
+            // clear content
+            unset($content);
+            $content = [];
+            if ($context['color_mode'] == 'light') {
+                $palete = $decoration['global']['dark_palete'];
+            }
+            else {
+                $palete = $decoration['global']['light_palete'];
+            }
+
+            $background = 'bg-' . $decoration['global']['secondary_color'] . '-' . $palete;
+            $content['decoration']['background'] = $background;
+
+            // re-render atoms TBD: avoid double rendering!
+
+            foreach ($item['atoms'] as $key => $atom) {
+            // render atoms
+                $item['atoms'][$key]['mode'] = 'inversed';
+                if (isset($content[$item['atoms'][$key]['type']])) {
+                    print_r($item['atoms'][$key]);
+                    if (is_array($content[$item['atoms'][$key]['type']])) {
+                        $content[$item['atoms'][$key]['type']][] = parent::render($item['atoms'][$key], $decoration, $twigEnvironment, $context);
+                    }
+                    else {
+                        $temp = $content[$item['atoms'][$key]['type']];
+                        unset($content[$item['atoms'][$key]['type']]);
+                        $content[$item['atoms'][$key]['type']] = [];
+                        $content[$item['atoms'][$key]['type']][] = $temp;
+                        $content[$item['atoms'][$key]['type']][] = parent::render($item['atoms'][$key], $decoration, $twigEnvironment, $context);
+                    }
+
+                }
+                else {
+                    $content[$item['atoms'][$key]['type']] = parent::render($item['atoms'][$key], $decoration, $twigEnvironment, $context);
+                }
+            }
+        }
         // TBD: find the reason why type is empty
         if ($item['type']) {
             $html = $twigEnvironment->render('components/items/' . $item['type'] . '.html.twig', [

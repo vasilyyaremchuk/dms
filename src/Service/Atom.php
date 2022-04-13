@@ -13,16 +13,28 @@ class Atom {
         if (!isset($atom['classes'])) {
             $atom['classes'] = 'text-gray-700'; // logic TBD
         }
-        $atom = $this->atom_type_validate($atom);
+        $atom = $this->atom_type_validate($atom); // TBD duplicated?
 
         // check color mode and setup palete
         if ($context['color_mode'] == 'light') {
-            $palete = $decoration['global']['dark_palete'];
-            $reversed_palete = $decoration['global']['light_palete'];
+            if (isset($atom['mode'])) {
+                $palete = $decoration['global']['light_palete'];
+                $reversed_palete = $decoration['global']['dark_palete'];
+            }
+            else {
+                $palete = $decoration['global']['dark_palete'];
+                $reversed_palete = $decoration['global']['light_palete'];
+            }
         }
         else {
-            $palete = $decoration['global']['light_palete'];
-            $reversed_palete = $decoration['global']['dark_palete'];
+            if (isset($atom['mode'])) {
+                $palete = $decoration['global']['dark_palete'];
+                $reversed_palete = $decoration['global']['light_palete'];
+            }
+            else {
+                $palete = $decoration['global']['light_palete'];
+                $reversed_palete = $decoration['global']['dark_palete'];
+            }
         }
         // TBD: more universal rules for classes
         if ($atom['type'] == 'link' || $atom['type'] == 'text') {
