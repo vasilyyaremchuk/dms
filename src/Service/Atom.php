@@ -37,6 +37,7 @@ class Atom {
             }
         }
         // TBD: more universal rules for classes
+
         if ($atom['type'] == 'link' || $atom['type'] == 'text') {
             $color = $atom['type'] == 'text' ? $decoration['global']['text_color'] : $decoration['global']['primary_color'];
             $atom['classes'] = 'text-'. $color . '-' . $palete;
@@ -85,8 +86,16 @@ class Atom {
                     break;
             }
         }
+        // display
+        if (isset($atom['display']) && $atom['display']) {
+            $display = '--' . $atom['display'];
+        }
+        else {
+            $display = '';
+        }
 
-        $html = $twigEnvironment->render('components/atoms/' . $atom['type'] . '.html.twig', [
+
+        $html = $twigEnvironment->render('components/atoms/' . $atom['type'] . $display . '.html.twig', [
             'classes' => $atom['classes'],
             'content' => $atom['content'],
             'alt' => isset($atom['alt']) ? $atom['alt'] : '',

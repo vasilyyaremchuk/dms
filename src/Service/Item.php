@@ -107,7 +107,6 @@ class Item extends Atom {
             // render atoms
                 $item['atoms'][$key]['mode'] = 'inversed';
                 if (isset($content[$item['atoms'][$key]['type']])) {
-                    print_r($item['atoms'][$key]);
                     if (is_array($content[$item['atoms'][$key]['type']])) {
                         $content[$item['atoms'][$key]['type']][] = parent::render($item['atoms'][$key], $decoration, $twigEnvironment, $context);
                     }
@@ -125,6 +124,13 @@ class Item extends Atom {
                 }
             }
         }
+        // Re-render image
+        /*if (isset($available_components[$item_type]["display"]["image"]) && $available_components[$item_type]["display"]["image"]) {
+            $item['atoms']['image']['display'] = $available_components[$item_type]['display']['image'];
+            $content['image'] = parent::render($item['atoms']['image'], $decoration, $twigEnvironment, $context);
+        }*/
+
+
         // TBD: find the reason why type is empty
         if ($item['type']) {
             $html = $twigEnvironment->render('components/items/' . $item['type'] . '.html.twig', [

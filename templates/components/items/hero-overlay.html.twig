@@ -1,0 +1,12 @@
+<!-- Hero overlay -->
+        <div class="w-full h-screen bg-center bg-no-repeat bg-cover" style="background-image: url({{ content.image|raw }});">
+          <div class="w-full h-screen bg-opacity-60 bg-' . $bg_color . ' flex justify-center items-center relative">
+              <div class="mx-4 text-center lg:w-1/2">
+                {{ content.headline|raw }}{{ content.headline|raw }}
+                {{ content.text|raw }}
+              </div>
+              <div class="absolute bottom-14">
+                {{ content.button|raw }}
+              </div>
+          </div>
+        </div>
