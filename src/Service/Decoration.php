@@ -6,8 +6,8 @@ class Decoration {
     /**
      * Load the content
      */
-    public function load() {
-        $string = file_get_contents("./decoration.json");
+    public function load(string $industry='Default') {
+        $string = file_get_contents('../content/' . $industry . '/decoration.json');
         $decoration = json_decode($string, true);
 
         // check and complete decoration settings TBD: make more universal
