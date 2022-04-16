@@ -94,7 +94,6 @@ class Atom {
             $display = '';
         }
 
-
         $html = $twigEnvironment->render('components/atoms/' . $atom['type'] . $display . '.html.twig', [
             'classes' => $atom['classes'],
             'content' => $atom['content'],

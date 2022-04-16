@@ -12,6 +12,14 @@
         {
           "atoms": [
             {
+              "content": "/images/logoplaceholder.png",
+              "type": "image"
+            }
+          ]
+        },
+        {
+          "atoms": [
+            {
               "content": {
                 "url": "https://abzats.com/",
                 "title": "Home"

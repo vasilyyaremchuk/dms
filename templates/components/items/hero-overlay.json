@@ -10,7 +10,9 @@
     "display": {
       "image": "background"
     },
-    "max_in_row": 3,
+    "light_mode_class": "bg-white",
+    "dark_mode_class": "bg-black",
+    "max_in_row": 1,
     "min_in_row": 1,
     "whitelist": [
       "full-width"

@@ -21,10 +21,6 @@ class Section extends Item{
             }
         }
 
-        if (!isset($section['color_mode']) || !$section['color_mode']) {
-            $color_mode = ['light', 'dark'];
-            $section['color_mode'] = $color_mode[array_rand($color_mode)];
-        }
         foreach ($section['items'] as $key => $item) {
             $content['items'][] = parent::render($item, $decoration, $twigEnvironment, $section);
         }

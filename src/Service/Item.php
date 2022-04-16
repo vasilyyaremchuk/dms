@@ -37,6 +37,11 @@ class Item extends Atom {
             else {
                 $available_components[$key]['score'] = -100; // TBD: better way to deny
             }
+            // force horizontal menu on the top
+            if ($context['order'] == 1 && $key == 'horizontal-menu') {
+                $available_components[$key]['score'] += 1;
+            }
+
         }
         $content = [];
         // select item type
@@ -79,12 +84,24 @@ class Item extends Atom {
                 $item_type = $key;
             }
         }
+
+        // TBD: validate if item type is set
+
+        // randimise item type
+        $item_types = [];
+        foreach ($available_components as $key => $available_component) {
+            if (is_array($available_component) && $available_component['score'] == $item_type_score) {
+                $item_types[] = $key;
+            }
+        }
+        $item_type = $item_types[array_rand($item_types)];
+        $item['type'] = $item_type;
+
+        // determen variant
         if (!empty($available_components[$item_type]['variant'])) {
             $variant = $available_components[$item_type]['variant'];
             $content['variant'] = $variant[array_rand($variant)];
         }
-        // TBD: validate if item type is set
-        $item['type'] = $item_type;
 
         // Inversed mode of the element
         if (isset($available_components[$item_type]['mode']) && $available_components[$item_type]['mode'] == 'inversed') {
@@ -124,13 +141,22 @@ class Item extends Atom {
                 }
             }
         }
-        // Re-render image
-        /*if (isset($available_components[$item_type]["display"]["image"]) && $available_components[$item_type]["display"]["image"]) {
-            $item['atoms']['image']['display'] = $available_components[$item_type]['display']['image'];
-            $content['image'] = parent::render($item['atoms']['image'], $decoration, $twigEnvironment, $context);
-        }*/
-
-
+        // Re-render image TBD: more universal
+        if (isset($available_components[$item_type]["display"]["image"]) && $available_components[$item_type]["display"]["image"]) {
+            foreach ($item['atoms'] as $key => $atom) {
+                if ($item['atoms'][$key]['type'] == 'image') {
+                    $item['atoms'][$key]['display'] = $available_components[$item_type]['display']['image'];
+                    $content['image'] = parent::render($item['atoms'][$key], $decoration, $twigEnvironment, $context);
+                }
+            }
+        }
+        // Additional class
+        if (isset($available_components[$item_type]["light_mode_class"]) && $context['color_mode'] == 'dark') {
+            $content['additional_class'] = $available_components[$item_type]["light_mode_class"];
+        }
+        if (isset($available_components[$item_type]["dark_mode_class"]) && $context['color_mode'] == 'light') {
+            $content['additional_class'] = $available_components[$item_type]["dark_mode_class"];
+        }
         // TBD: find the reason why type is empty
         if ($item['type']) {
             $html = $twigEnvironment->render('components/items/' . $item['type'] . '.html.twig', [
