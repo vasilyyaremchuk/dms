@@ -8,12 +8,13 @@
   "sections": [
     {
       "type": "containered",
+      "color_mode": "dark",
       "items": [
         {
           "atoms": [
             {
-              "content": "/images/logoplaceholder.png",
-              "type": "image"
+              "content": "Our New Clinic",
+              "type": "headline"
             }
           ]
         },
@@ -21,35 +22,35 @@
           "atoms": [
             {
               "content": {
-                "url": "https://abzats.com/",
+                "url": "#",
                 "title": "Home"
               },
               "type": "link"
             },
             {
               "content": {
-                "url": "https://abzats.com/",
+                "url": "#",
                 "title": "About Us"
               },
               "type": "link"
             },
             {
               "content": {
-                "url": "https://abzats.com/",
+                "url": "#",
                 "title": "Services"
               },
               "type": "link"
             },
             {
               "content": {
-                "url": "https://abzats.com/",
-                "title": "Portfolio"
+                "url": "#",
+                "title": "Testimonials"
               },
               "type": "link"
             },
             {
               "content": {
-                "url": "https://abzats.com/",
+                "url": "#",
                 "title": "Contact Us"
               },
               "type": "link"
@@ -59,24 +60,25 @@
       ]
     },
     {
+      "color_mode": "light",
       "items": [
         {
           "atoms": [
             {
-              "content": "Hero title.",
+              "content": "+1 915 123 56 78",
               "type": "headline"
             },
             {
-              "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+              "content": "A New Level of Healthcare",
               "type": "text"
             },
             {
-              "content": "https://images.unsplash.com/photo-1648737154547-b0dfd281c51e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60",
+              "content": "https://source.unsplash.com/random/1200x800?clinic",
               "type": "image"
             },
             {
               "content": {
-                "url": "https://abzats.com/",
+                "url": "#",
                 "title": "Read more"
               },
               "type": "button"
@@ -86,11 +88,12 @@
       ]
     },
     {
+      "color_mode": "dark",
       "items": [
         {
           "atoms": [
             {
-              "content": "Main Content",
+              "content": "Our Services",
               "type": "headline"
             },
             {
@@ -98,7 +101,7 @@
               "type": "image"
             },
             {
-              "content": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.",
+              "content": "",
               "type": "text"
             }
           ]
@@ -107,11 +110,12 @@
       "type": "containered"
     },
     {
+      "color_mode": "dark",
       "items": [
         {
           "atoms": [
             {
-              "content": "CTA title",
+              "content": "Service 1",
               "type": "headline"
             },
             {
@@ -119,43 +123,22 @@
               "type": "text"
             },
             {
+              "content": "https://source.unsplash.com/random/600x600?asthma",
+              "type": "image"
+            },
+            {
               "content": {
-                "url": "https://abzats.com/",
-                "title": "Read more"
+                "url": "#",
+                "title": "Contact Us"
               },
               "type": "button"
             }
           ]
-        }
-      ]
-    },
-    {
-      "items": [
+        },
         {
           "atoms": [
             {
-              "content": "",
-              "type": "headline"
-            },
-            {
-              "content": "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-              "type": "image"
-            },
-            {
-              "content": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
-              "type": "text"
-            }
-          ]
-        }
-      ],
-      "type": "containered"
-    },
-    {
-      "items": [
-        {
-          "atoms": [
-            {
-              "content": "Card 1",
+              "content": "Service 2",
               "type": "headline"
             },
             {
@@ -163,12 +146,12 @@
               "type": "text"
             },
             {
-              "content": "https://images.unsplash.com/photo-1648737154547-b0dfd281c51e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60",
+              "content": "https://source.unsplash.com/random/600x600?cancer",
               "type": "image"
             },
             {
               "content": {
-                "url": "https://abzats.com/",
+                "url": "#",
                 "title": "Read more"
               },
               "type": "button"
@@ -178,7 +161,7 @@
         {
           "atoms": [
             {
-              "content": "Card 2",
+              "content": "Service 3",
               "type": "headline"
             },
             {
@@ -186,35 +169,12 @@
               "type": "text"
             },
             {
-              "content": "https://images.unsplash.com/photo-1648737154547-b0dfd281c51e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60",
+              "content": "https://source.unsplash.com/random/600x600?medcine",
               "type": "image"
             },
             {
               "content": {
-                "url": "https://abzats.com/",
-                "title": "Read more"
-              },
-              "type": "button"
-            }
-          ]
-        },
-        {
-          "atoms": [
-            {
-              "content": "Card 3",
-              "type": "headline"
-            },
-            {
-              "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-              "type": "text"
-            },
-            {
-              "content": "https://images.unsplash.com/photo-1648737154547-b0dfd281c51e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60",
-              "type": "image"
-            },
-            {
-              "content": {
-                "url": "https://abzats.com/",
+                "url": "#",
                 "title": "Read more"
               },
               "type": "button"
@@ -224,41 +184,260 @@
       ]
     },
     {
+      "color_mode": "dark",
+      "items": [
+        {
+          "atoms": [
+            {
+              "content": "",
+              "type": "headline"
+            },
+            {
+              "content": "",
+              "type": "text"
+            },
+            {
+              "content": {
+                "url": "#",
+                "title": "All Services"
+              },
+              "type": "button"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "color_mode": "light",
+      "items": [
+        {
+          "atoms": [
+            {
+              "content": "Our Doctors",
+              "type": "headline"
+            },
+            {
+              "content": "",
+              "type": "image"
+            },
+            {
+              "content": "",
+              "type": "text"
+            }
+          ]
+        }
+      ],
+      "type": "containered"
+    },
+    {
+      "color_mode": "light",
+      "items": [
+        {
+          "atoms": [
+            {
+              "content": "Anna White",
+              "type": "headline"
+            },
+            {
+              "content": "Assistant Professor, Department of Diagnostic",
+              "type": "text"
+            },
+            {
+              "content": "https://source.unsplash.com/random/800x800?doctor,woman",
+              "type": "image"
+            },
+            {
+              "content": {
+                "url": "#",
+                "title": "Schedule Appointment"
+              },
+              "type": "button"
+            }
+          ]
+        },
+        {
+          "atoms": [
+            {
+              "content": "Yan White",
+              "type": "headline"
+            },
+            {
+              "content": "Attending Surgeon, Orthopaedic Surgery",
+              "type": "text"
+            },
+            {
+              "content": "https://source.unsplash.com/random/800x800?doctor,man",
+              "type": "image"
+            },
+            {
+              "content": {
+                "url": "#",
+                "title": "Schedule Appointment"
+              },
+              "type": "button"
+            }
+          ]
+        },
+        {
+          "atoms": [
+            {
+              "content": "Anna White",
+              "type": "headline"
+            },
+            {
+              "content": "Assistant Professor, Department of Diagnostic",
+              "type": "text"
+            },
+            {
+              "content": "https://source.unsplash.com/random/800x800?doctor,woman",
+              "type": "image"
+            },
+            {
+              "content": {
+                "url": "#",
+                "title": "Schedule Appointment"
+              },
+              "type": "button"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "color_mode": "light",
+      "items": [
+        {
+          "atoms": [
+            {
+              "content": "John Black",
+              "type": "headline"
+            },
+            {
+              "content": "Attending Surgeon, Orthopaedic Surgery",
+              "type": "text"
+            },
+            {
+              "content": "https://source.unsplash.com/random/800x800?assistant",
+              "type": "image"
+            },
+            {
+              "content": {
+                "url": "#",
+                "title": "Schedule Appointment"
+              },
+              "type": "button"
+            }
+          ]
+        },
+        {
+          "atoms": [
+            {
+              "content": "John Doe",
+              "type": "headline"
+            },
+            {
+              "content": "Attending Surgeon, Orthopaedic Surgery",
+              "type": "text"
+            },
+            {
+              "content": "https://source.unsplash.com/random/800x800?portrait",
+              "type": "image"
+            },
+            {
+              "content": {
+                "url": "#",
+                "title": "Schedule Appointment"
+              },
+              "type": "button"
+            }
+          ]
+        },
+        {
+          "atoms": [
+            {
+              "content": "Ali Yen",
+              "type": "headline"
+            },
+            {
+              "content": "Associate Professor, Division of Pulmonary",
+              "type": "text"
+            },
+            {
+              "content": "https://source.unsplash.com/random/800x800?professor",
+              "type": "image"
+            },
+            {
+              "content": {
+                "url": "#",
+                "title": "Schedule Appointment"
+              },
+              "type": "button"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "color_mode": "light",
+      "items": [
+        {
+          "atoms": [
+            {
+              "content": "",
+              "type": "headline"
+            },
+            {
+              "content": "",
+              "type": "text"
+            },
+            {
+              "content": {
+                "url": "#",
+                "title": "All Doctors"
+              },
+              "type": "button"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "color_mode": "dark",
       "type": "containered",
       "items": [
         {
           "atoms": [
             {
               "content": {
-                "url": "https://abzats.com/",
+                "url": "#",
                 "title": "Home"
               },
               "type": "link"
             },
             {
               "content": {
-                "url": "https://abzats.com/",
+                "url": "#",
                 "title": "About Us"
               },
               "type": "link"
             },
             {
               "content": {
-                "url": "https://abzats.com/",
+                "url": "#",
                 "title": "Services"
               },
               "type": "link"
             },
             {
               "content": {
-                "url": "https://abzats.com/",
+                "url": "#",
                 "title": "Portfolio"
               },
               "type": "link"
             },
             {
               "content": {
-                "url": "https://abzats.com/",
+                "url": "#",
                 "title": "Contact Us"
               },
               "type": "link"
@@ -269,35 +448,35 @@
           "atoms": [
             {
               "content": {
-                "url": "https://abzats.com/",
+                "url": "#",
                 "title": "Home"
               },
               "type": "link"
             },
             {
               "content": {
-                "url": "https://abzats.com/",
+                "url": "#",
                 "title": "About Us"
               },
               "type": "link"
             },
             {
               "content": {
-                "url": "https://abzats.com/",
+                "url": "#",
                 "title": "Services"
               },
               "type": "link"
             },
             {
               "content": {
-                "url": "https://abzats.com/",
+                "url": "#",
                 "title": "Portfolio"
               },
               "type": "link"
             },
             {
               "content": {
-                "url": "https://abzats.com/",
+                "url": "#",
                 "title": "Contact Us"
               },
               "type": "link"
@@ -308,35 +487,35 @@
           "atoms": [
             {
               "content": {
-                "url": "https://abzats.com/",
+                "url": "#",
                 "title": "Home"
               },
               "type": "link"
             },
             {
               "content": {
-                "url": "https://abzats.com/",
+                "url": "#",
                 "title": "About Us"
               },
               "type": "link"
             },
             {
               "content": {
-                "url": "https://abzats.com/",
+                "url": "#",
                 "title": "Services"
               },
               "type": "link"
             },
             {
               "content": {
-                "url": "https://abzats.com/",
+                "url": "#",
                 "title": "Portfolio"
               },
               "type": "link"
             },
             {
               "content": {
-                "url": "https://abzats.com/",
+                "url": "#",
                 "title": "Contact Us"
               },
               "type": "link"
@@ -346,8 +525,8 @@
         {
           "atoms": [
             {
-              "content": "/images/logoplaceholder.png",
-              "type": "image"
+              "content": "(C) One more good clinic, 2022",
+              "type": "text"
             }
           ]
         }

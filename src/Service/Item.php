@@ -95,7 +95,12 @@ class Item extends Atom {
             }
         }
         $item_type = $item_types[array_rand($item_types)];
-        $item['type'] = $item_type;
+        if (!isset($item['type'])) {
+            $item['type'] = $item_type;
+        }
+        else {
+            $item_type = $item['type'];
+        }
 
         // determen variant
         if (!empty($available_components[$item_type]['variant'])) {

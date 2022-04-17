@@ -1,0 +1,59 @@
+{
+  "teaser":
+    {
+      "text": "The title of the page.",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "image": "https://images.unsplash.com/photo-1463797221720-6b07e6426c24?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2671&q=80"
+    },
+  "sections": [
+    {
+      "items": [
+        {
+          "atoms": [
+            {
+              "content": "John Doe",
+              "type": "headline"
+            },
+            {
+              "content": "Your personal consultant.",
+              "type": "text"
+            },
+            {
+              "content": "https://source.unsplash.com/random/900x1200?man, portrait",
+              "type": "image"
+            },
+            {
+              "content": {
+                "url": "https://abzats.com/",
+                "title": "Hire me"
+              },
+              "type": "button"
+            }
+          ],
+          "type": "card-profile"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "atoms": [
+            {
+              "content": "CV",
+              "type": "headline"
+            },
+            {
+              "content": "",
+              "type": "image"
+            },
+            {
+              "content": "I am a experienced frontend developer seeking a full-time position in the field of web and frontend developing, where I can apply my knowledge and skills for continious improvement...",
+              "type": "text"
+            }
+          ]
+        }
+      ],
+      "type": "containered"
+    }
+  ]
+}

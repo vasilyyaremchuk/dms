@@ -1,0 +1,19 @@
+{
+    "name": "card-profile",
+    "elements":
+      {
+        "headline": 1,
+        "text": 1,
+        "button": 1,
+        "image": 1
+      },
+    "light_mode_class": "bg-white",
+    "dark_mode_class": "bg-black",
+    "max_in_row": 1,
+    "min_in_row": 1,
+    "whitelist": [
+      "full-width"
+    ],
+    "blacklist": [
+    ]
+  }

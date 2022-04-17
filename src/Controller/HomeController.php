@@ -75,14 +75,13 @@ class HomeController extends AbstractController
               </label>
               <select name="industry" class="block w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-blue-primary focus:border-gray-500">
                 <option>Default</option>
-                <option>Cafe</option>
                 <option>Clinic</option>
+                <option>Personal</option>
+                <option>Restaurant</option>
               </select>
               <input type="submit" name="action" value="Generate" class="mx-auto lg:mx-0 hover:underline hover:bg-red-primary bg-black text-white font-bold rounded-full py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out space-y-8 mt-8" />
             </form>
           </div>
         </section>';
       }
-
-
 }

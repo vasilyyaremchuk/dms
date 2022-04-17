@@ -1,0 +1,15 @@
+<!-- Card -->
+<div class="max-w-sm rounded overflow-hidden shadow-lg m-2 pb-8 {{ content.decoration.background }}">
+  {% if content.image is defined %}
+    <div class="m-8">
+      {{ content.image|raw }}
+    </div>
+  {% endif %}
+  <div class="px-6 py-4">
+    {{ content.headline|raw }}
+    {{ content.text|raw }}
+  </div>
+  <div class="px-6 pt-4 pb-2">
+    {{ content.button|raw }}
+  </div>
+</div>
